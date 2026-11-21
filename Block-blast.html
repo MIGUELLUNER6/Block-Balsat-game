@@ -1,0 +1,52 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101827">
+  <title> luner's Block Crush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <button class="icon-btn" id="soundBtn" aria-label="Toggle sound">♫</button>
+      <div class="brand"><span class="brand-mark">▦</span><span> LUNER'S <b>BLOCK <b>CRUSH</b></span></div>
+      <button class="icon-btn" id="pauseBtn" aria-label="Pause">Ⅱ</button>
+    </header>
+
+    <section class="stats">
+      <div class="stat-card"><span>SCORE</span><strong id="score">0</strong></div>
+      <div class="stat-card best"><span>BEST</span><strong id="best">0</strong></div>
+      <div class="stat-card"><span>LEVEL</span><strong id="level">1</strong></div>
+    </section>
+
+    <section class="game-area">
+      <div class="board-heading"><span>CLASSIC MODE</span><span class="goal">CLEAR LINES · BEAT YOUR BEST</span></div>
+      <div id="board" class="board" aria-label="10 by 10 game board"></div>
+      <div class="hint" id="hint">Choose a block below, then tap the board to place it.</div>
+    </section>
+
+    <section class="pieces-area">
+      <div class="pieces-heading"><span>YOUR BLOCKS</span><span id="piecesLeft">3 AVAILABLE</span></div>
+      <div id="tray" class="tray"></div>
+    </section>
+
+    <footer class="bottom">
+      <button class="secondary-btn" id="restartBtn">↻ &nbsp; NEW GAME</button>
+      <div class="tip">FIT BLOCKS · COMPLETE LINES · CRUSH!</div>
+    </footer>
+  </main>
+
+  <div class="overlay hidden" id="overlay">
+    <div class="dialog">
+      <div class="dialog-icon" id="dialogIcon">Ⅱ</div>
+      <h1 id="dialogTitle">PAUSED</h1>
+      <p id="dialogText">Take a breath. Your game is waiting.</p>
+      <button class="primary-btn" id="resumeBtn">CONTINUE</button>
+      <button class="secondary-btn dialog-secondary" id="overlayNewBtn">NEW GAME</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
